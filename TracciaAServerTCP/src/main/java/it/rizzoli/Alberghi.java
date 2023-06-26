@@ -23,18 +23,18 @@ public class Alberghi {
         this.command = new Command();
     }
 
-    public void add(Albergo c){
+    public synchronized void add(Albergo c){
         this.listaAlberghi.add(c);
     }
 
-    public String getAllCars(){
+    public synchronized String getAllAlberghi(){
 
         String json = new Gson().toJson(this.listaAlberghi);
         return json;
 
     }
 
-    public String getAllCarsSorted(){
+    public synchronized String getAllAlberghiSorted(){
 
         List<Albergo> tempList = new ArrayList<>(this.listaAlberghi);
 
@@ -44,7 +44,7 @@ public class Alberghi {
 
     }
 
-    public String getMoreExprensive(){
+    public synchronized String getMoreExprensive(){
 
         double max = 0;
         Albergo car = null;

@@ -49,7 +49,7 @@ public class ServerThread extends Thread{
             } else if (s.equalsIgnoreCase("all")) {
 
                 this.command.setStatus("OK");
-                this.command.setResult(alberghi.getAllCars());
+                this.command.setResult(alberghi.getAllAlberghi());
 
                 out.println(new Gson().toJson(this.command));
                 out.flush();
@@ -57,7 +57,7 @@ public class ServerThread extends Thread{
             } else if (s.equalsIgnoreCase("all_sorted")) {
 
                 this.command.setStatus("OK");
-                this.command.setResult(alberghi.getAllCarsSorted());
+                this.command.setResult(alberghi.getAllAlberghiSorted());
 
                 out.println(new Gson().toJson(this.command));
                 out.flush();
