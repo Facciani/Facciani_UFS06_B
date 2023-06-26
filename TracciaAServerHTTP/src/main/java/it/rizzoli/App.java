@@ -38,7 +38,7 @@ public class App
             server.createContext("/all_sort", new MyHandlerSorted());
             server.setExecutor(null);
 
-            server.createContext("/more_expensive", new MyHandlerMore());
+            server.createContext("/more_expensive_suite", new MyHandlerMore());
             server.setExecutor(null);
 
             server.start();
